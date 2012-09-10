@@ -205,3 +205,20 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Proximo &#8594;"
+    page_gap: "&hellip;"
+
+    page_entries_info:
+      single_page:
+        zero:  "Nenhum Registro Encontrado"
+        one:   "Exibindo 1 %{model}"
+        other: "Exibindo %{count} %{model}"
+      single_page_html:
+        zero:  "Nenhum Registro Encontrado"
+        one:   "Exibindo <b>1</b> %{model}"
+        other: "Exibindo <b>&nbsp;%{count}</b> %{model}"
+
+      multi_page: "Exibindo %{model} %{from} - %{to} de %{count} no total"
+      multi_page_html: "Exibindo %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b>%{count}</b> no total"    

@@ -1,0 +1,11 @@
+<h2>Nova Regra</h2>
+
+<%= form_for(@role) do |f| %>
+
+  <p><%= f.label :nome %><br />
+  <%= f.text_field :name %></p>
+
+  <div><%= f.submit "Criar Regra" %></div>
+<% end %>
+<%= link_to 'Voltar', roles_path %>
+

@@ -1,0 +1,49 @@
+
+<p>
+  <b>Nome:</b>
+  <%= @pessoa.nome %>
+</p>
+
+<p>
+  <b>Cpf cnpj:</b>
+  <%= @pessoa.cpf_cnpj %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @pessoa.tipo %>
+</p>
+
+<p>
+  <b>Rg:</b>
+  <%= @pessoa.rg %>
+</p>
+
+<p>
+  <b>Cgf:</b>
+  <%= @pessoa.cgf %>
+</p>
+
+<p>
+  <b>Data nascimento:</b>
+  <%= @pessoa.data_nascimento %>
+</p>
+
+<p>
+  <b>Sexo:</b>
+  <%= @pessoa.sexo %>
+</p>
+
+<p>
+  <b>Naturalidade:</b>
+  <%= @pessoa.naturalidade %>
+</p>
+
+<p>
+  <b>Fantasia:</b>
+  <%= @pessoa.fantasia %>
+</p>
+
+
+<%= link_to 'Editar', edit_pessoa_path(@pessoa) %> |
+<%= link_to 'Voltar', pessoas_path %>

@@ -1,0 +1,37 @@
+<%= form_for(@pessoa) do |f| %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf_cnpj %><br />
+    <%= f.text_field :cpf_cnpj %>
+  </div>
+  <div class="field">
+    <%= f.label :rg %><br />
+    <%= f.text_field :rg %>
+  </div>
+  <div class="field">
+    <%= f.label :cgf %><br />
+    <%= f.text_field :cgf %>
+  </div>
+  <div class="field">
+    <%= f.label :data_nascimento %><br />
+    <%= f.date_select :data_nascimento, :start_year => 1900 %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo %><br />
+    <%= f.select :sexo, ["", "M", "F"] %>  </div>
+  <div class="field">
+    <%= f.label :naturalidade %><br />
+    <%= f.text_field :naturalidade %>
+  </div>
+  <div class="field">
+    <%= f.label :fantasia %><br />
+    <%= f.text_field :fantasia %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

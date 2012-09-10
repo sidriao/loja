@@ -1,0 +1,53 @@
+<table cellspacing="1" cellpadding="1" >
+ <tr>
+<td colspan="7" align="left">
+      <%= page_entries_info @pessoas %>
+</td>
+</tr>   
+<tr>
+    <td colspan="12" align="center" class="tituloSecao">Listando pessoas</td>
+</tr>  
+
+<tr>
+    <th class="tituloSecao">Nome</th>
+    <th class="tituloSecao">Cpf cnpj</th>
+    <th class="tituloSecao">Tipo</th>
+    <th class="tituloSecao">Rg</th>
+    <th class="tituloSecao">Cgf</th>
+    <th class="tituloSecao">Data nascimento</th>
+    <th class="tituloSecao">Sexo</th>
+    <th class="tituloSecao">Naturalidade</th>
+    <th class="tituloSecao">Fantasia</th>
+    <th colspan="3" class="tituloSecao">Ações</th>
+</tr>
+
+<% @pessoas.each do |pessoa| %>
+  <tr>
+    <td><%= pessoa.nome %></td>
+    <td><%= pessoa.cpf_cnpj %></td>
+    <td><%= pessoa.tipo_descricao %></td>
+    <td><%= pessoa.rg %></td>
+    <td><%= pessoa.cgf %></td>
+    <td><%= pessoa.data_nascimento.to_s_br %></td>
+    <td><%= pessoa.sexo %></td>
+    <td><%= pessoa.naturalidade %></td>
+    <td><%= pessoa.fantasia %></td>
+    <td><%= link_to 'Show', pessoa %></td>
+    <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
+    <td><%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Deseja Realmente Apagar?' } %></td>
+  </tr>
+<% end %>
+<tr align="center">
+    <td colspan="6"><br>
+            <div>
+                <%= will_paginate @pessoas %>
+            </div>
+        </td>
+</tr>
+</table>
+
+
+<br />
+
+<%= link_to 'Nova Pessoa', new_pessoa_path %>
+<%= link_to 'Home', root_path %>

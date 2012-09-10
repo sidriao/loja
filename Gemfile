@@ -18,4 +18,6 @@ gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem 'therubyracer', :platforms => :ruby
-gem 'pg'
+gem 'pg', '0.14.0'
+gem 'brazilian-rails', '3.2.0'
+gem 'will_paginate', '3.0.3'

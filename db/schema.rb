@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120418171112) do
+ActiveRecord::Schema.define(:version => 20120906233756) do
+
+  create_table "pessoas", :force => true do |t|
+    t.string   "nome"
+    t.string   "cpf_cnpj"
+    t.integer  "tipo"
+    t.string   "rg"
+    t.string   "cgf"
+    t.date     "data_nascimento"
+    t.string   "sexo"
+    t.string   "naturalidade"
+    t.string   "fantasia"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "roles", :force => true do |t|
     t.string   "name"
